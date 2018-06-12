@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<title>SERENA'S PORTFOLIO</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="logo.1.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin:10px;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer}
+.w3-quarter img:hover{opacity: 0.9; transition: 0.3s}
+</style>
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a> 
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTFOLIO</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">SERENA CHAN </span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()"><img src="logo.2.png" style="float:right" style="width:100%" height="40"></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Photo grid -->
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+      <img src="portfolio/teapot.png" style="width:100%" onclick="onClick(this)" alt="Infographic">
+      <img src="portfolio/album.png" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+      <img src="portfolio/lyric.png" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+   </div>
+    
+   <div class="w3-quarter">
+      <img src="portfolio/album.png" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
+      <img src="/w3images/man_bench.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+      <img src="/w3images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="portfolio/pool.png" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+      <img src="/w3images/girl_mountain.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="/w3images/closegirl.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="portfolio/lyric.png" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="/w3images/girl_train.jpg" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
+      <img src="/w3images/boy.jpg" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+<!--       <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a> -->
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+<!--       <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a> -->
+<!--       <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a> -->
+<!--       <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a> -->
+    </div>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About Me</b></h4>
+    <img src="me.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>Serena Chan</h4>
+      <p>I am a first generation, third year student at the <b>University of California, Berkeley, majoring in Economics with a minor in Data Science.</b> I have a passion for marketing, strategy, data analytics, graphic design, client service, and product management. I was raised in San Francisco, currently based in Berkeley, and aspire to live in New York City.</p> 
+
+      <p> My personal values place people at the center of my work which is why I focus on creating eye-catching content to meet a large target audience. Driven by my imagination and ambition, I constantly set new goals for myself and through my curiousity, I am able to discover what interests me. I enjoy meeting new people and maintaining meaningful relationships as each person teaches me something new and exciting.</p>
+
+      <p>I embrace diversity and change, allowing me to thrive in a fast-paced environment that constantly adapts with the development of new technology. My versatility and determination help me navigate difficult challenges that allow me to become a stronger individual, positively influencing and transforming any project or task that I partake in. With my adventurous spirit and interest in business and technology, I hope to make impact wherever I go. I welcome opportunities to apply my more creative skills in business, such as developing strategies and materials while relating it to big data.</p>
+
+      <p><b>My hobbies include:</b> attending Broadway Musicals and symphonies, kayaking, bouldering, graphic and web design, and going on food crawls around the Bay Area. </p>
+      <p> Currently open to summer oppportunities so feel free to connect with me at <b>serenacha@berkeley.edu.</b></p>
+      <p>tel: 5353 35531</p>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16">Technical Skills</h4>
+      <p class="w3-wide">Illustrator</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:75%">75%</div>
+      </div>
+      <p class="w3-wide">Web Design</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:65%">65%</div>
+      </div>
+      <p class="w3-wide">Photoshop</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
+      </div>
+      <p><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">Download Resume</button></p>
+      <hr class="w3-opacity">
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+        <p>Leave me a note if you want to grab some coffee. I love meeting new people!</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+ 
+  
+  <div class="w3-black w3-center w3-padding-24">© Serena Chan 2018</div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
